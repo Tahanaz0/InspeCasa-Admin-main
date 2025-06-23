@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green: #008080;
+  --gray: #F5F7FA;
+
+}
+
+body {
+  font-family: 'Nunito';
+  background-color: var(--gray);
+
+}
+
+.custom {
+  padding-top: 80px;
+  margin-left: 280px;
+}
+
+@media screen and (max-width: 768px) {
+  .custom {
+    margin-left: 0;
+
+  }
+
+}

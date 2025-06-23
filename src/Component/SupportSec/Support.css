@@ -1,0 +1,318 @@
+.support-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  /* margin-left: 250px; */
+  margin-top: 10px;
+}
+
+.inbox {
+  width: 33%;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+   scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.inbox::-webkit-scrollbar {
+  display: none;
+}
+  /* align-items: center; */
+
+
+
+.inner-inbox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-inbox input{
+  padding: 8px;
+  margin-top: 20px;
+  font-size: 15px;
+  color: #DC2626;
+}
+.inbox h3{
+    padding-top: 20px;
+    font-family: "Poppins";
+    font-size: 22px;
+    color: #DC2626;
+    padding-left: 17px;
+
+}
+
+.inbox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.inbox li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+}
+.user{
+    display: flex;
+    margin-top: 20px;
+    gap: 15px;
+    font-family: "Poppins";
+}
+
+.names{
+    padding-left: 100px;
+    font-size: 16px;
+    font-weight: 550;
+   
+    margin-left: -100px;
+}
+.msg{
+    padding-top: 10px;
+    font-size: 13px;
+}
+.time{
+    font-family: "poppins";
+    font-size: 10px;
+}
+.inbox li:hover, .inbox li.active {
+  background-color:#24a59f25;
+}
+.searchInput {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.chat-empty{
+ margin: auto;
+ font-family: "Poppins";
+ font-size: 25px;
+ color: #DDDDDD;
+}
+.back-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-right: 13px;
+  cursor: pointer;
+  color: #333;
+  
+}
+
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding-left: 10px;
+  height: 100vh;
+
+}
+
+
+
+
+.chat.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.chat-header {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 100px;
+   max-height: calc(100vh - 170px)
+}
+.chat-name{
+  font-family: "Poppins";
+  font-size: 20px;
+  padding-left: 10px;
+}
+.message {
+  max-width: 70%;
+  padding: 12px;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-size: 13px;
+    margin-left: -100px;
+}
+
+.message.left {
+  background: #D3D9E0;
+  align-self: flex-start;
+  padding-left: 25px;
+}
+
+.message.right {
+  background: #00808033;
+  align-self: flex-end;
+   padding-right: 25px;
+}
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* padding: 10px; */
+  border-top: 1px solid #ddd;
+}
+
+.chat-footer input {
+  /* flex: 1; */
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+}
+.send{
+  width: 50px;
+  margin-top: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (min-width: 1600px) {
+
+  .inbox{
+    width: 28%;
+  }
+}
+@media (min-width: 1820px) {
+
+  .inbox{
+    width: 26%;
+  }
+  .searchInput{
+    width: 80%;
+  }
+}
+@media (min-width: 1940px) {
+
+  .inbox{
+    width: 25%;
+  }
+  
+}
+@media (min-width: 2100px) {
+
+  .inbox{
+    width: 22%;
+  }
+  
+}
+@media (min-width: 2430px) {
+
+  .inbox{
+    width: 18%;
+  }
+  
+}
+@media (max-width: 1024px) {
+
+  .inbox{
+    width: 40%;
+  }
+}
+@media (max-width: 900px) {
+  .support-container{
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .support-container {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .inbox{
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #DDDDDD;
+  }
+  .chat-footer{
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    padding-bottom: 10px;
+    z-index: 1000;
+    
+  }
+   @media (max-width: 900px) {
+    .inbox{
+      width: 50%;
+    }
+   }
+  @media (max-width: 600px) {
+    .inbox{
+      width: 80%;
+    }
+  }
+@media (max-width: 440px) {
+ 
+  .chat-footer{
+    padding: 0px;
+  }
+  .inbox{
+    width: 100%;
+    border: 1px solid #DDDDDD;
+  }
+  .name{
+    padding-left: 0;
+  }
+  .message.left{
+   align-self: flex-start;
+   margin-left: -80px;
+  }
+  .message.right{
+    align-self: flex-end;
+  }
+    .chat-footer input{
+    width: 100%;
+    margin-left: 20px;
+    padding: 7px;
+  }
+  .chat-footer button{
+    padding: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 30px;
+    padding-top: 10px;
+  }
+}
+}
+
+

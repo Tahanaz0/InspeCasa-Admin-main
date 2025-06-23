@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.SideBar-container{
+    background-color: rgba(0, 255, 255, 0.113);
+    width: 280px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.sideBar-inner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.sideBar-section{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.sideBar{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 20px;
+}
+.sideBar-logout{
+       display: flex;
+    
+    gap: 30px;
+    padding-bottom: 30px;
+}
+.sideBar p  ,.sideBar-logout p{
+   font-family: var(--font);
+   font-size: 18px;
+   color: var(--grey);
+   cursor: pointer;
+}
+
+.logo{
+    margin-top: 40px;
+}
+
+
+
+
+@media screen and (max-width : 768px) {
+       .SideBar-container{
+        display: none;
+       }
+}
