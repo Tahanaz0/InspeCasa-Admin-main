@@ -13,12 +13,20 @@
 .side-inner-container {
   margin-top: 40px;
 }
+.sideBarAll{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: bisque; */
+    height: 100%
+}
 
 .side-bar-section {
-  margin-top: 70px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  justify-content: space-between;
+  /* row-gap: 7px; */
 }
 
 .side-bar {
@@ -32,7 +40,7 @@
   font-family: sans-serif;
   text-decoration: none;
   color: #B1B1B1;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .none {
@@ -60,6 +68,13 @@ text-decoration: none;
 }
 .logout p{
     color: red;
+}
+.logout{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  /* background-color: rgb(45, 45, 129); */
 }
 
 .side-bar.active img {

@@ -42,8 +42,8 @@
 }
 
 .para h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
+    font-size: 25px;
+    /* margin-bottom: 10px; */
     text-align: center;
     font-family: "Poppins";
 
@@ -52,11 +52,11 @@
 .para p {
     font-size: 18px;
     color: #666;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     color: black;
     font-family: "Poppins";
     font-weight: 500;
-    padding-top: 20px;
+    padding-top: 10px;
     width: 95%;
     margin: 0 auto;
     text-align: center;

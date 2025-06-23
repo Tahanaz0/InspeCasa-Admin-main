@@ -30,9 +30,9 @@ const SideBar = () => {
                      <p>Support</p>
                 </div>
                  <div className='sideBar'>
-              <img src="/images/logout.svg" alt="" />
-              <p>logout</p>
-            </div>
+                 <img src="/images/logout.svg" alt="" />
+                   <p>logout</p>
+                   </div>
                 
             </div>
            

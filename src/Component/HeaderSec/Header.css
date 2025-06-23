@@ -143,13 +143,26 @@ left: 250px;
 
 }
 
+.search-wrapper {
+  position: relative;
+  width: 100%; /* Or set fixed width e.g., 300px */
+}
+
+.custom-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* 👈 left padding to make space for icon */
+  box-sizing: border-box;
+}
+
 .search-icon {
   position: absolute;
-  left: 10px;
-  top: 60%;
+  left: 12px;
+  top: 50%;
   transform: translateY(-50%);
   color: #888;
+  pointer-events: none;
 }
+
 
 
 

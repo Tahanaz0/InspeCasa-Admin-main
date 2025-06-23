@@ -11,13 +11,13 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 600,
+    width: 550,
     maxHeight: '90vh',
     bgcolor: 'background.paper',
     borderRadius: 2,
     boxShadow: 24,
     overflowY: 'auto',
-    boxShadow: 'none',
+    // boxShadow: 'none',
     border: 'none',
     outline: 'none',
     scrollbarWidth: 'none',
@@ -59,7 +59,7 @@ const AddProperty = () => {
                                 </div>
                                 <div className='plus-photo'>
                                     <img src="/images/miniplus.svg" alt="" />
-                                    <p>Add Photos</p>
+                                    <p>Photos</p>
                                 </div>
                             </div>
 

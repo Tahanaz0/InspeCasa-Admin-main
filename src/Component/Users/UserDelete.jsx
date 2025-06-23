@@ -20,7 +20,7 @@ const style = {
     borderRadius: 2,
     boxShadow: 24,
     overflowY: 'auto',
-    boxShadow: 'none',
+    // boxShadow: 'none',
     border: 'none',
     outline: 'none',
     scrollbarWidth: 'none',

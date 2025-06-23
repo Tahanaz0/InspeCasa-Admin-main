@@ -28,7 +28,9 @@ const SmallBoxMenu = () => {
                 <div className="menu-box-overlay" onClick={toggleBox}>
                     <div className="menu-box" onClick={(e) => e.stopPropagation()}>
                         <div className="box-header">
-                            <h3 className='Menu'><img src="/images/logo.svg" alt="" /></h3>
+                            <h3 className='Menu'>
+                                <img src="/images/logo.svg" alt="" />
+                                </h3>
 
                         </div>
                         <div className="box-content">
