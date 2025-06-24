@@ -21,7 +21,7 @@ const Header = () => {
         return "Support";
 
       default:
-        return "Page";
+        return "Report";
     }
   };
 
@@ -43,10 +43,10 @@ const Header = () => {
 
               <style>
                 {`
-      .custom-input::placeholder {
-        color: #008080;
-      }
-    `}
+                  .custom-input::placeholder {
+                   color: #008080;
+                   }
+                `}
               </style>
 
               <input

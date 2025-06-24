@@ -1,7 +1,7 @@
 import React from "react";
 import "./SideBar.css";
 
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
 const SideBarSec = () => {
   return (
@@ -33,7 +33,7 @@ const SideBarSec = () => {
           </NavLink>
 
           <NavLink
-            to="/service"
+            to="/report"
             className={({ isActive }) =>
               isActive ? "side-bar active" : "side-bar"
             }
