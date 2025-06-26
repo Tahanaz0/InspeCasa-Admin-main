@@ -34,6 +34,7 @@ function ExportButton() {
         width:'100%',
         cursor: "pointer",
         fontWeight: "bold",
+        marginTop:'30%'
       }}
     >
       <LuArrowDownToLine style={{

@@ -123,7 +123,7 @@ const User= () => {
         <img className='add-icon' src="/images/plus.svg" alt="pus" />
       </div> */}
       <div className="table-container">
-        <table>
+        <table className='user-table'>
           <thead>
 
             <tr className='th'>

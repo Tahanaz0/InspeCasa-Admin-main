@@ -313,6 +313,36 @@
     padding-top: 10px;
   }
 }
+@media screen and (max-width: 480px) {
+  .support-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .inbox {
+    width: 100%;
+    min-width: 0;
+    padding: 5px;
+  }
+  .chat {
+    padding-left: 0;
+    min-width: 0;
+  }
+  .chat-header {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .chat-body {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .message {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .chat-footer input {
+    font-size: 0.95rem;
+    padding: 7px;
+  }
 }
 
 

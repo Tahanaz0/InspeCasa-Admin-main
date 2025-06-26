@@ -422,3 +422,37 @@
   cursor: pointer;
   accent-color: var(--green);
 }
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px 5px 40px 5px;
+  }
+  .card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  }
+  .card-content {
+    padding: 8px;
+  }
+  .card-content h4 {
+    font-size: 13px;
+  }
+  .card-content p {
+    font-size: 10px;
+  }
+  .date-badge {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+  .user-info {
+    font-size: 11px;
+    gap: 5px;
+  }
+  .main-content {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+}

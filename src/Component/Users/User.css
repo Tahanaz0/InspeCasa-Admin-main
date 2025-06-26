@@ -341,3 +341,29 @@ tbody td {
     width: 90vw !important;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .table-container {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+  table {
+    min-width: 400px;
+    font-size: 0.9rem;
+  }
+  thead th, tbody td {
+    padding: 8px 6px;
+    font-size: 0.9rem;
+  }
+  .user-header {
+    flex-direction: column;
+    padding: 8px 4px;
+    font-size: 1rem;
+  }
+  .footer {
+    flex-direction: column;
+    margin-right: 0;
+    font-size: 0.85rem;
+  }
+}
+
