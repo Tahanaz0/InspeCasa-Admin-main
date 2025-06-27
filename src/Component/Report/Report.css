@@ -1,11 +1,11 @@
-.report-container {
-  display: flex;
-  /* flex-wrap: wrap; */
-  /* align-items: flex-end; */
-  margin-top: 5px;
-  padding: 10px 0px;
-  box-sizing: border-box;
-  /* gap: 16px; */
+.report-container1 {
+    background: white;
+    padding: 25px;
+    /* border-radius: 10px; */
+    /* max-width: 800px; */
+    width: 100%;
+    display: flex;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
 }
 /* .input-section1 {
   flex: 1 1 0;
@@ -13,24 +13,28 @@
   margin: 0;
 } */
 .input-section2 {
-  /* width: auto; */
-  padding: 10px 10px;
-  margin-top: 0;
-  margin-left: 0;
-}
-.input-section1 {
-  width: 100%;
+  width: 30%;
   padding: 10px;
-  /* border: 1px solid #ddd; */
-  border-radius: 5px;
-  font-size: 14px;
-  box-sizing: border-box;
-
-  outline: no;
-  flex: 1 1 0;
-  min-width: 180px;
   margin: 0;
 }
+.input-section1 {
+    width: 33%;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 5px; */
+    font-size: 14px;
+    /* box-sizing: border-box; */
+    outline: no;
+    /* flex: 1 1 0; */
+    /* min-width: 180px; */
+    margin: 0;
+}
+
+/* .para1, .para2 {
+  margin-bottom: 8px;
+  font-weight: 500;
+} */
+
 .date-input {
   width: 100%;
   padding: 10px;
@@ -38,9 +42,37 @@
   border-radius: 5px;
   font-size: 14px;
   box-sizing: border-box;
-  /* margin-top: 8px; */
   outline: none;
 }
+
+/* Media query for laptop screens */
+@media screen and (min-width: 1024px) {
+  .report-container {
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .input-section1,
+  .input-section2 {
+    width: 280px;
+  }
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 900px) {
+  .report-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .input-section1,
+  .input-section2 {
+    width: 100%;
+  }
+}
+
 .custom-select {
   width: 100%;
   padding: 10px;
@@ -500,20 +532,6 @@
 }
 .custom-select-modal-options {
   align-items: flex-start;
-}
-
-@media screen and (max-width: 900px) {
-  .report-container {
-    flex-direction: column;
-    gap: 5px;
-  }
-  @media screen and (max-width: 900px) {
-    .input-section1,
-    .input-section2 {
-      width: 79%;
-      min-width: 0;
-    }
-  }
 }
 
 .pagination button:hover {

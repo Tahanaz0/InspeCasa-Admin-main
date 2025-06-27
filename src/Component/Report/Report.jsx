@@ -28,7 +28,7 @@ export default function Report() {
 
   return (
     <>
-      <div className="report-container">
+      <div className="report-container1">
         <div className="input-section1">
           <p className="para1">Start Date</p>
           <input type="date" className="date-input" />

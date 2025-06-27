@@ -1,8 +1,27 @@
-import React from "react";
 import { BiSolidDownload } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { VscEye } from "react-icons/vsc";
 import "./Report/Report.css";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+// 👇 Detail View Component (inline added)
+const ReportDetailView = ({ report, onClose }) => {
+  if (!report) return null;
+
+  return (
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <button className="close-btn" onClick={onClose}>✖</button>
+        <h2>{report.property}</h2>
+        <img src={report.image} alt={report.property} className="view-image" />
+        <p><strong>Condition:</strong> {report.condition}</p>
+        <p><strong>Inspector:</strong> {report.inspector}</p>
+        <p><strong>Signature:</strong> {report.signature}</p>
+      </div>
+    </div>
+  );
+};
 
 const data = [
   {
@@ -31,7 +50,7 @@ const data = [
     property: "Brickstone House",
     condition: "Good",
     inspector: "Olivia Carter",
-    signature: "Areeba",
+    signature: "",
   },
   {
     image: "/images/house2.png",
@@ -45,39 +64,18 @@ const data = [
     property: "White Haven Cottage",
     condition: "Needs Repair",
     inspector: "Emma Collins",
-    signature: "Areeba",
-  },
-  {
-    image: "/images/house2.png",
-    property: "Brickstone House",
-    condition: "Good",
-    inspector: "Olivia Carter",
-    signature: "Areeba",
-  },
-  {
-    image: "/images/house2.png",
-    property: "Coral Heights",
-    condition: "Damage",
-    inspector: "Ethan Mitchell",
-    signature: "Areeba",
-  },
-  {
-    image: "/images/house2.png",
-    property: "White Haven Cottage",
-    condition: "Needs Repair",
-    inspector: "Emma Collins",
-    signature: "Areeba",
-  },
-  {
-    image: "/images/house2.png",
-    property: "Brickstone House",
-    condition: "Good",
-    inspector: "Olivia Carter",
     signature: "Areeba",
   },
 ];
 
 const InspectionTable = () => {
+  const [selectedReport, setSelectedReport] = useState(null);
+  const navigate = useNavigate();
+
+  const handleView = (report, idx) => {
+    navigate(`/report/view/${idx}`);
+  };
+
   function capitalize(text) {
     return text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
   }
@@ -114,7 +112,7 @@ const InspectionTable = () => {
               </td>
               <td className="table-cell" data-label="Actions">
                 <div className="actions">
-                  <VscEye className="icon eye" />
+                  <VscEye className="icon eye" onClick={() => handleView(item, idx)} />
                   <BiSolidDownload className="icon download" />
                   <RiDeleteBin6Line className="icon trash" />
                 </div>
@@ -123,6 +121,7 @@ const InspectionTable = () => {
           ))}
         </tbody>
       </table>
+
       <div className="footer">
         <div className="entry-info">Showing 1 to 3 of 12 entries</div>
         <div className="pagination">
@@ -133,6 +132,14 @@ const InspectionTable = () => {
           <button className="arrow">{">"}</button>
         </div>
       </div>
+
+      {/* 👇 View page opens here */}
+      {selectedReport && (
+        <ReportDetailView
+          report={selectedReport}
+          onClose={() => setSelectedReport(null)}
+        />
+      )}
     </div>
   );
 };

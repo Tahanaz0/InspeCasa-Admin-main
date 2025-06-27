@@ -6,6 +6,7 @@ import UserPage from '../Pages/UserPage'
 import PropertyPage from '../Pages/PropertyPage'
 import SupportPage from '../Pages/SupportPage'
 import ReportPage from '../Pages/ReportPage'
+import ReportView from '../Component/Report/ReportView'
 
 const CustomRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const CustomRoutes = () => {
             <Route path="/property" element={<PropertyPage/>} />
             <Route path="/support" element={<SupportPage/>} />
             <Route path="/report" element={<ReportPage/>} />
+            <Route path="/report/view/:index" element={<ReportView />} />
 
       </Routes>
     </div>
