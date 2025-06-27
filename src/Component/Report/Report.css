@@ -7,6 +7,23 @@
     display: flex;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
 }
+/* Very small screens like 320px */
+@media (max-width: 374px) {
+  .report-container1 {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+/* Small to medium mobile screens like 375px to 767px */
+@media (max-width: 767px) {
+  .report-container1 {
+    flex-direction: column;
+    width: 85%;
+  }
+}
+
+
 /* .input-section1 {
   flex: 1 1 0;
   min-width: 180px;

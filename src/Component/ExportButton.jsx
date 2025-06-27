@@ -1,5 +1,6 @@
 import React from "react";
 import { LuArrowDownToLine } from "react-icons/lu";
+import './Users/User.css'
 
 function ExportButton() {
   const handleExport = () => {
@@ -26,18 +27,7 @@ function ExportButton() {
   return (
     <button
       onClick={handleExport}
-      style={{
-        backgroundColor: "#B4E5E3",
-        color: "#008080",
-        padding: "10px 20px",
-        border: "none",
-        borderRadius: "8px",
-        // width: '100%',
-        cursor: "pointer",
-        fontWeight: "bold",
-        marginTop: '13%',
-        marginLeft:'20%'
-      }}
+     className="button-custom"
     >
       <LuArrowDownToLine style={{
         color:'#008080'
