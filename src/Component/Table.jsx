@@ -4,8 +4,8 @@ import { VscEye } from "react-icons/vsc";
 import "./Report/Report.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ReportDeleteModal from "./Report/ReportDelete";
 
-// 👇 Detail View Component (inline added)
 const ReportDetailView = ({ report, onClose }) => {
   if (!report) return null;
 
@@ -23,7 +23,7 @@ const ReportDetailView = ({ report, onClose }) => {
   );
 };
 
-const data = [
+const initialData = [
   {
     image: "/images/house1.png",
     property: "Rosewood Villa",
@@ -50,7 +50,7 @@ const data = [
     property: "Brickstone House",
     condition: "Good",
     inspector: "Olivia Carter",
-    signature: "",
+    signature: "Areeba",
   },
   {
     image: "/images/house2.png",
@@ -69,7 +69,24 @@ const data = [
 ];
 
 const InspectionTable = () => {
+  const [data, setData] = useState(initialData); // ✅ state added
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [reportToDelete, setReportToDelete] = useState(null);
   const [selectedReport, setSelectedReport] = useState(null);
+
+  const handleDeleteClick = (report) => {
+    setReportToDelete(report);
+    setShowDeleteModal(true);
+  };
+
+  const handleConfirmDelete = (propertyName) => {
+    const updatedData = data.filter(
+      (item) => item.property !== propertyName
+    );
+    setData(updatedData); // ✅ update the list
+    setShowDeleteModal(false);
+  };
+
   const navigate = useNavigate();
 
   const handleView = (report, idx) => {
@@ -105,16 +122,26 @@ const InspectionTable = () => {
                   <span className="property-name">{item.property.trim()}</span>
                 </div>
               </td>
-              <td className="table-cell" data-label="Overall Condition">{item.condition}</td>
-              <td className="table-cell" data-label="Inspector">{item.inspector}</td>
+              <td className="table-cell" data-label="Overall Condition">
+                {item.condition}
+              </td>
+              <td className="table-cell" data-label="Inspector">
+                {item.inspector}
+              </td>
               <td className="table-cell signature" data-label="Signature">
                 {item.signature && capitalize(item.signature)}
               </td>
               <td className="table-cell" data-label="Actions">
                 <div className="actions">
-                  <VscEye className="icon eye" onClick={() => handleView(item, idx)} />
+                  <VscEye
+                    className="icon eye"
+                    onClick={() => handleView(item, idx)}
+                  />
                   <BiSolidDownload className="icon download" />
-                  <RiDeleteBin6Line className="icon trash" />
+                  <RiDeleteBin6Line
+                    className="icon trash"
+                    onClick={() => handleDeleteClick(item)}
+                  />
                 </div>
               </td>
             </tr>
@@ -123,7 +150,7 @@ const InspectionTable = () => {
       </table>
 
       <div className="footer">
-        <div className="entry-info">Showing 1 to 3 of 12 entries</div>
+        <div className="entry-info">Showing 1 to {data.length} of {initialData.length} entries</div>
         <div className="pagination">
           <button className="arrow">{"<"}</button>
           <button className="page">1</button>
@@ -133,11 +160,21 @@ const InspectionTable = () => {
         </div>
       </div>
 
-      {/* 👇 View page opens here */}
+      {/* View Modal */}
       {selectedReport && (
         <ReportDetailView
           report={selectedReport}
           onClose={() => setSelectedReport(null)}
+        />
+      )}
+
+      {/* Delete Modal */}
+      {showDeleteModal && reportToDelete && (
+        <ReportDeleteModal
+          open={showDeleteModal}
+          onClose={() => setShowDeleteModal(false)}
+          reportId={reportToDelete.property}
+          onConfirm={handleConfirmDelete}
         />
       )}
     </div>
