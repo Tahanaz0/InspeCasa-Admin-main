@@ -162,19 +162,6 @@ left: 250px;
 }
 
 
-
-
-
-
-
-
-
-@media screen and (max-width : 960px) {
-  .avator {
-    /* display: none; */
-  }
-}
-
 @media screen and (max-width : 768px) {
   .header-container {
     margin-left: 0;
@@ -282,9 +269,6 @@ left: 250px;
     margin-right: -20px;
     width: 30px;
   }
-    /* .text input{
-      width: 79px;
-    } */
 }
 
 @media (max-width: 600px) {
@@ -295,11 +279,6 @@ left: 250px;
     height: 60vh;
     padding: 14px;
   }
-
-  /* .bell {
-    width: 20px;
-    height: 20px;
-  } */
 
   .notification-dropdown p {
     font-size: 13px;
