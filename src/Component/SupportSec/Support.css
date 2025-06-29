@@ -269,18 +269,18 @@
     border-top: 1px solid #ddd;
     padding-bottom: 10px;
     z-index: 1000;
-    
   }
-   @media (max-width: 900px) {
-    .inbox{
-      width: 50%;
-    }
-   }
-  @media (max-width: 600px) {
-    .inbox{
-      width: 80%;
-    }
+}
+@media (max-width: 900px) {
+  .inbox{
+    width: 50%;
   }
+}
+@media (max-width: 600px) {
+  .inbox{
+    width: 80%;
+  }
+}
 @media (max-width: 440px) {
  
   .chat-footer{
