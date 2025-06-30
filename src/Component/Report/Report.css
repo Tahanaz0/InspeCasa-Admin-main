@@ -492,3 +492,61 @@
   border: 1.5px solid #20b2aa;
   background: #fff;
 }
+
+@media (max-width: 425px) {
+  .table-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  .custom-table {
+    width: 100vw !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
+  }
+  .property-name,
+  .table-property-text {
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 90vw !important;
+    overflow-wrap: break-word !important;
+  }
+}
+@media (max-width: 375px) {
+  .table-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  .custom-table {
+    width: 100vw !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
+  }
+  .property-name,
+  .table-property-text {
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 88vw !important;
+    overflow-wrap: break-word !important;
+  }
+}
+@media (max-width: 320px) {
+  .table-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+  }
+  .custom-table {
+    width: 100vw !important;
+    min-width: unset !important;
+    box-sizing: border-box !important;
+  }
+  .property-name,
+  .table-property-text {
+    white-space: normal !important;
+    word-break: break-word !important;
+    max-width: 85vw !important;
+    overflow-wrap: break-word !important;
+  }
+}

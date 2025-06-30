@@ -43,7 +43,7 @@ const SmallBoxMenu = () => {
 
                                 <p>Property</p>
                             </NavLink>
-                            <NavLink to="/user" className={({ isActive }) => isActive ? 'side-bar active' : 'side-bar'} onClick={() => setShowBox(false)}>
+                            <NavLink to="/report" className={({ isActive }) => isActive ? 'side-bar active' : 'side-bar'} onClick={() => setShowBox(false)}>
                                 <img src="/images/reports.svg" alt="" />
                                 <p>Reports</p>
                             </NavLink>
